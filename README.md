@@ -1,6 +1,6 @@
 # Eau Claire's Salon
 
-####  A Project Exploring Basic MAny-to-Many Relationships With MVC C#, Entity, and MySQL Workbench
+####  A Project Exploring Basic Many-to-Many Relationships With MVC C#, Entity, and MySQL Workbench
 
 #### By _**Sammai Gutierrez**_
 
