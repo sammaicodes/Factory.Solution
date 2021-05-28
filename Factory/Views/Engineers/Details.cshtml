@@ -17,10 +17,22 @@ else
   <ul>
   @foreach(var join in Model.JoinEntities)
   {
-    <li>@join.Machine.Description</li>
+    <li>@Html.ActionLink($"{join.Machine.Description}", "Details", "Machines", new { id = join.MachineId }) | </li>
+    @* <li>@join.Machine.Description</li> *@
   }
+  @* @foreach (Machine machine in Model)
+{
+  <li>@Html.ActionLink($"{machine.Description}", "Details", "Machines", new { id = machine.MachineId }) | </li>
+} *@
   </ul>
 }
+
+@* //////////
+@foreach (Machine machine in Model)
+{
+  <li>@Html.ActionLink($"{machine.Description}", "Details", new { id = machine.MachineId }) | </li>
+}
+///////// *@
 
 <p>@Html.ActionLink("Back to list of all engineers", "Index")</p>
 <p>@Html.ActionLink("Edit Engineer", "Edit", new { id = Model.EngineerId })</p>
