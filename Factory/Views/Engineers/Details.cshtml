@@ -6,34 +6,27 @@
 
 <h2>Engineer @Html.DisplayFor(model => model.EngineerName) Details</h2>
 <hr />
-
-@if(@Model.JoinEntities.Count == 0)
-{
-  <p>@Html.DisplayFor(model => model.EngineerName) does not have any machines assigned yet</p>
-}
-else
-{
-  <h4>List of machines @Html.DisplayFor(model => model.EngineerName) is licensed to repair:</h4>
-  <ul>
-  @foreach(var join in Model.JoinEntities)
+<div class="border border-white">
+  @if(@Model.JoinEntities.Count == 0)
   {
-    <li>@Html.ActionLink($"{join.Machine.Description}", "Details", "Machines", new { id = join.MachineId }) | </li>
-    @* <li>@join.Machine.Description</li> *@
+    <p>@Html.DisplayFor(model => model.EngineerName) does not have any machines assigned yet</p>
   }
-  @* @foreach (Machine machine in Model)
-{
-  <li>@Html.ActionLink($"{machine.Description}", "Details", "Machines", new { id = machine.MachineId }) | </li>
-} *@
-  </ul>
-}
-
-@* //////////
-@foreach (Machine machine in Model)
-{
-  <li>@Html.ActionLink($"{machine.Description}", "Details", new { id = machine.MachineId }) | </li>
-}
-///////// *@
-
-<p>@Html.ActionLink("Back to list of all engineers", "Index")</p>
-<p>@Html.ActionLink("Edit Engineer", "Edit", new { id = Model.EngineerId })</p>
+  else
+  {
+    <h4>List of machines @Html.DisplayFor(model => model.EngineerName) is licensed to repair:</h4>
+    <ul>
+    @foreach(var join in Model.JoinEntities)
+    {
+      <li>@Html.ActionLink($"{join.Machine.Description}", "Details", "Machines", new { id = join.MachineId }) </li>
+      @* <li>@join.Machine.Description</li> *@
+    }
+    </ul>
+  }
+</div>
+<br>
+<br>
+<div class="row" style="text-align: center">
+<p>@Html.ActionLink("Back to list of all engineers", "Index")  ||  </p>
+<p>@Html.ActionLink("Edit Engineer", "Edit", new { id = Model.EngineerId })  ||  </p>
 <p>@Html.ActionLink("Delete Engineer", "Delete", new { id = Model.EngineerId })</p>
+</div>
