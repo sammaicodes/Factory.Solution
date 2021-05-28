@@ -1,0 +1,17 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Machine
+
+<h4>Add a new machine</h4>
+
+@using (Html.BeginForm())
+{
+    <p>Machine Description: @Html.TextBoxFor(model => model.Description)</p>
+
+    <p>@Html.Label("Select Engineer"): @Html.DropDownList("EngineerId")</p>
+
+    <input type="submit" value="Add machine" class="btn btn-default" />
+}
+<p>@Html.ActionLink("Show all Machines", "Index")</p>
