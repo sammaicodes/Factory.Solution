@@ -1,4 +1,4 @@
-# Eau Claire's Salon
+# Dr. Sillistringz's Factory
 
 ####  A Project Exploring Basic Many-to-Many Relationships With MVC C#, Entity, and MySQL Workbench
 
