@@ -39,8 +39,7 @@ _In brief, this project allows a user to add indefinite engineers and add many m
               }
             }`_
         * _Fill in the required info. (database name, MySQL user-name & password) without the squared brackets._
-    * _Navigate to the Factory folder and run the command `$dotnet ef migrations add Initial`
-    * _Followed by `$dotnet ef database update` command_
+    * _Navigate to the Factory folder and run the command `$dotnet ef database update`
     * _Still in the Factory folder and run the command `$dotnet build`_
     * _To begin using the MVC application, run the command `$dotnet run`_
     * _Visit the app via the browser: 'localhost:5000/'_
